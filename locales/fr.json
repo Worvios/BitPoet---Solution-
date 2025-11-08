@@ -1,0 +1,228 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "services": "Services",
+    "projects": "Projets",
+  "about": "À propos",
+    "blog": "Insights",
+    "contact": "Contact",
+    "toggleTheme": "Changer de thème"
+  },
+  "footer": {
+    "taglineFallback": "Nous façonnons des expériences logicielles sensibles et audacieuses.",
+    "rights": "© {year} BitPoet. Tous droits réservés.",
+    "navigation": "Navigation",
+    "connect": "Réseaux",
+    "homeLinkAria": "Retour à la page d’accueil BitPoet",
+    "emailAria": "Envoyer un e-mail à {email}",
+    "socialAria": "Ouvrir {label} dans un nouvel onglet"
+  },
+  "home": {
+    "meta": {
+      "title": "BitPoet — Logiciel & âme",
+      "description": "BitPoet conçoit et développe des expériences numériques poétiques mêlant précision technique et émotion."
+    },
+    "hero": {
+      "eyebrow": "Logiciel & âme",
+      "title": "Nous créons des produits digitaux qui résonnent comme un poème",
+      "subtitle": "Du concept au lancement, BitPoet aligne design, ingénierie et stratégie pour des produits mémorables.",
+      "primaryCta": {
+        "label": "Collaborer",
+        "href": "contact"
+      },
+      "secondaryCta": {
+        "label": "Voir les projets",
+        "href": "projects"
+      },
+      "philosophy": {
+        "title": "Des futurs dessinés en lumière",
+        "copy": "Ingénierie rigoureuse et imagination lumineuse : chaque sortie conjugue performance, accessibilité et poésie."
+      }
+    },
+    "services": {
+      "eyebrow": "Expertises",
+      "title": "Services signature",
+      "cta": "Tous les services",
+      "pillar": "Service clé"
+    },
+    "projects": {
+      "eyebrow": "Réalisations",
+      "title": "Travaux récents",
+      "cta": "Tous les projets"
+    },
+    "contact": {
+      "eyebrow": "Collaboration",
+      "title": "Composons votre prochain lancement",
+      "subtitle": "Partagez votre vision et nous tracerons une feuille de route rapide et mesurable."
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Services",
+      "description": "Découvrez les services BitPoet : stratégie produit, design systems et développement haute performance."
+    },
+    "eyebrow": "Savoir-faire",
+    "title": "Ce que nous orchestrons",
+    "description": "Nous accompagnons fondateurs, équipes créatives et entreprises pour lancer des produits logiciels poétiques et robustes.",
+    "error": "Impossible de charger les services. Rechargez la page ou contactez-nous directement.",
+    "pillars": "Pilier {index}"
+  },
+  "servicesPage": {
+    "sections": {
+      "software": {
+        "title": "Ingénierie logicielle",
+        "copy": "Solutions full‑stack haute performance avec une touche humaine. Du backend aux interfaces immersives, conçues pour l’échelle et l’inspiration."
+      },
+      "game": {
+        "title": "Développement de jeux",
+        "copy": "Quand la narration interactive rencontre le code. Des mondes où se mêlent philosophie, émotion et précision de design."
+      },
+      "art": {
+        "title": "Art & écriture",
+        "copy": "Art visuel et narratif comme architecture émotionnelle — des histoires qui respirent, des mondes qui pensent."
+      },
+      "consulting": {
+        "title": "Conseil & mentorat",
+        "copy": "Aider créateurs et équipes à relier créativité et technologie avec clarté et authenticité."
+      }
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projets",
+      "description": "Collaborations sélectionnées où esthétique lumineuse et architecture fiable se rencontrent."
+    },
+    "eyebrow": "Portfolio",
+    "title": "Études de cas",
+    "description": "Chaque mission est l’occasion d’allier forme et fonction.",
+    "error": "Impossible de charger les projets pour le moment. Réessayez bientôt.",
+    "card": {
+      "privateLabel": "Privé",
+      "ctaLabel": "Demander des détails",
+      "ctaHref": "contact",
+      "privateCopy": "Projet privé / sous NDA — démo disponible sur demande."
+    }
+  },
+  "projectsPage": {
+    "cards": {
+      "mindFragments": {
+        "title": "Mind Fragments",
+        "desc": "Jeu indépendant narratif et émotionnel, explorant mémoire et identité.",
+        "tags": { "t1": "Conception narrative", "t2": "Unity", "t3": "Écriture assistée par IA", "t4": "Systèmes émotionnels" }
+      },
+      "neonArchive": {
+        "title": "Neon Archive",
+        "desc": "Un espace numérique pour stocker et converser avec vos notes grâce à l’IA.",
+        "tags": { "t1": "Next.js", "t2": "Clerk", "t3": "Sanity", "t4": "Intégration IA" }
+      },
+      "codeCanvas": {
+        "title": "Code & Canvas",
+        "desc": "Expérience d’art génératif mêlant coup de pinceau et algorithmes.",
+        "tags": { "t1": "p5.js", "t2": "WebGL", "t3": "Moteurs créatifs" }
+      },
+      "loopWithin": {
+        "title": "The Loop Within",
+        "desc": "Prototype de roman visuel philosophique autour de la répétition et la conscience de soi.",
+        "tags": { "t1": "Godot", "t2": "Systèmes narratifs", "t3": "Psychologie" }
+      }
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Insights",
+      "description": "Chroniques, sorties et notes de terrain du studio BitPoet."
+    },
+    "eyebrow": "Signaux",
+    "title": "Regards du laboratoire",
+    "description": "Des idées sur le craft, la culture et le code – en néon.",
+    "error": "Impossible de charger le blog. Revenez très vite.",
+    "unknownDate": "Date à définir",
+    "readMore": "Lire l’article",
+    "feed": {
+      "eyebrow": "Nouveautés",
+      "title": "Dernières notes",
+      "cta": "Tous les articles",
+      "readMore": "Lire l’article"
+    },
+    "byAuthor": "Par {name}"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Échangeons pour imaginer ensemble votre prochaine release lumineuse."
+    },
+    "eyebrow": "Discutons",
+    "title": "Parlez-nous de votre vision",
+    "description": "Nous répondons sous deux jours ouvrés avec les prochaines étapes.",
+    "sidebar": {
+      "title": "Ligne directe",
+      "copy": "Envie d’un canal direct ? Écrivez-nous et planifions une session."
+    },
+    "form": {
+      "nameLabel": "Nom",
+      "emailLabel": "Email",
+      "messageLabel": "Notes projet",
+      "submitLabel": "Envoyer",
+      "successHeading": "Message envoyé",
+      "successBody": "Merci pour votre message. Nous revenons rapidement vers vous.",
+      "errorHeading": "Une erreur est survenue",
+      "errorBody": "Réessayez dans un instant ou écrivez-nous directement.",
+      "validation": {
+        "name": "Veuillez renseigner votre nom.",
+        "email": "Merci d’indiquer un email valide.",
+        "message": "Partagez quelques détails sur votre projet."
+      }
+    }
+  },
+  "errors": {
+    "global": {
+      "title": "Interruption momentanée",
+      "description": "La lueur s’est atténuée. Réessayez ou retournez à l’accueil.",
+      "retry": "Réessayer",
+      "home": "Accueil"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À propos",
+      "description": "Découvrez la philosophie et le parcours de BitPoet, la source de chaque collaboration."
+    },
+    "eyebrow": "Origines",
+    "title": "L'histoire derrière le studio",
+    "description": "BitPoet est la promesse de créer des expériences aussi intentionnelles qu'une œuvre littéraire et aussi vibrantes qu'une performance.",
+    "paragraphs": [
+      "BitPoet a commencé comme une expérience mêlant poésie, code et jeu. Je voulais savoir si un logiciel pouvait se vivre comme une histoire — si une interface pouvait porter la même densité qu’un vers. Chaque prototype devenait une méditation sur la texture, le rythme et l’arc émotionnel d’une interaction.",
+      "Au fil des années, cette expérience est devenue un studio. J’ai collaboré avec des fondateurs, artistes et technologues convaincus que rigueur et âme peuvent coexister. Nous avons livré des outils pour les penseurs, des jeux pour les conteurs et des expériences de marque empreintes de chaleur humaine.",
+      "Ma philosophie est simple : livrer avec intention. Je traite chaque livrable comme une œuvre littéraire — rédigée, éditée et orchestrée pour l’impact. L’ingénierie est méticuleuse, le design lumineux et la narration accordée à la résonance.",
+      "Aujourd’hui, BitPoet unit une expertise technique profonde et une intuition narrative. Qu’il s’agisse d’imaginer une mécanique de jeu immersive ou de bâtir un design system performant, la ligne directrice reste la même : créer des œuvres qui touchent autant qu’elles propulsent les métriques produit.",
+      "Si vous poursuivez une idée ambitieuse et cherchez un partenaire capable de la transformer en expérience vivante, composons-la ensemble."
+    ],
+    "highlights": [
+      {
+        "title": "Disciplines",
+        "items": [
+          "Ingénierie full-stack",
+          "Systèmes de game design",
+          "Architecture narrative",
+          "Direction créative"
+        ]
+      },
+      {
+        "title": "Approche",
+        "items": [
+          "La stratégie avant les pixels",
+          "Accessibilité et performance intégrées",
+          "Produit guidé par l’histoire"
+        ]
+      },
+      {
+        "title": "Convictions",
+        "items": [
+          "Façonner avec empathie",
+          "Livrer avec audace, itérer avec soin",
+          "Honorer données et intuition"
+        ]
+      }
+    ]
+  }
+}

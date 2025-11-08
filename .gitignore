@@ -1,0 +1,21 @@
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/.next
+/out
+
+# Misc
+.DS_Store
+*.log
+.env.local
+.env.*.local
+
+# Sanity
+/sanity/node_modules
+

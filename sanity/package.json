@@ -1,0 +1,14 @@
+{
+  "name": "bitpoet-studio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "dev:3334": "sanity dev --port 3334",
+    "deploy": "sanity deploy",
+    "graphql": "sanity graphql deploy"
+  },
+  "dependencies": {
+    "styled-components": "^6.1.19"
+  }
+}

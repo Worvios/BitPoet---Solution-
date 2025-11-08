@@ -1,0 +1,228 @@
+{
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+  "about": "About",
+    "blog": "Insights",
+    "contact": "Contact",
+    "toggleTheme": "Toggle theme"
+  },
+  "footer": {
+    "taglineFallback": "Crafting soulful software for bold brands.",
+    "rights": "© {year} BitPoet. All rights reserved.",
+    "navigation": "Navigate",
+    "connect": "Connect",
+    "homeLinkAria": "Return to the BitPoet home page",
+    "emailAria": "Send an email to {email}",
+    "socialAria": "Open {label} in a new tab"
+  },
+  "home": {
+    "meta": {
+      "title": "BitPoet — Software and Soul",
+      "description": "BitPoet designs and builds poetic digital experiences that fuse craft, code, and culture."
+    },
+    "hero": {
+      "eyebrow": "Software & Soul",
+      "title": "We build digital products that feel like poetry",
+      "subtitle": "From concept to launch, BitPoet orchestrates design, engineering, and strategy to help visionaries ship work that resonates.",
+      "primaryCta": {
+        "label": "Work with us",
+        "href": "contact"
+      },
+      "secondaryCta": {
+        "label": "See projects",
+        "href": "projects"
+      },
+      "philosophy": {
+        "title": "Futures scripted in light",
+        "copy": "We combine rigorous engineering with neon-bright imagination. Every release is tuned for performance, accessibility, and a hint of drama."
+      }
+    },
+    "services": {
+      "eyebrow": "Capabilities",
+      "title": "Services with soul",
+      "cta": "Full services",
+      "pillar": "Signature service"
+    },
+    "projects": {
+      "eyebrow": "Proof",
+      "title": "Recent work",
+      "cta": "All projects"
+    },
+    "contact": {
+      "eyebrow": "Collaborate",
+      "title": "Let’s compose your next release",
+      "subtitle": "Share your vision and we’ll choreograph a roadmap that balances speed, craft, and measurable outcomes."
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Services",
+      "description": "Explore BitPoet’s end-to-end services spanning product strategy, design systems, and high-performance engineering."
+    },
+    "eyebrow": "Craft",
+    "title": "What we orchestrate",
+    "description": "We partner with founders, creative teams, and enterprises to launch poetic, robust software products.",
+    "error": "We couldn’t load services right now. Please refresh or reach out directly.",
+    "pillars": "Pillar {index}"
+  },
+  "servicesPage": {
+    "sections": {
+      "software": {
+        "title": "Software Engineering",
+        "copy": "High-performance full-stack solutions with a human touch. From backend logic to immersive frontends, built to scale and inspire."
+      },
+      "game": {
+        "title": "Game Development",
+        "copy": "Interactive storytelling meets code. Crafting worlds that blend philosophy, emotion, and design precision."
+      },
+      "art": {
+        "title": "Art & Writing",
+        "copy": "Visual and narrative art as emotional architecture — stories that breathe, worlds that think."
+      },
+      "consulting": {
+        "title": "Consulting & Mentorship",
+        "copy": "Helping creators and teams bridge creativity and technology with clarity and authenticity."
+      }
+    }
+  },
+  "projects": {
+    "meta": {
+      "title": "Projects",
+      "description": "Selected collaborations that blend luminous aesthetics with resilient architecture."
+    },
+    "eyebrow": "Portfolio",
+    "title": "Case studies",
+    "description": "Every engagement is an invitation to push form and function in equal measure.",
+    "error": "We couldn’t load projects right now. Please refresh soon.",
+    "card": {
+      "privateLabel": "Private",
+      "ctaLabel": "Request details",
+      "ctaHref": "contact",
+      "privateCopy": "Project private / under NDA — demo available on request."
+    }
+  },
+  "projectsPage": {
+    "cards": {
+      "mindFragments": {
+        "title": "Mind Fragments",
+        "desc": "An emotional narrative-driven indie game exploring memory and identity.",
+        "tags": { "t1": "Narrative Design", "t2": "Unity", "t3": "AI-assisted Writing", "t4": "Emotional Systems" }
+      },
+      "neonArchive": {
+        "title": "Neon Archive",
+        "desc": "A digital space for storing and conversing with your notes using AI.",
+        "tags": { "t1": "Next.js", "t2": "Clerk", "t3": "Sanity", "t4": "AI Integration" }
+      },
+      "codeCanvas": {
+        "title": "Code & Canvas",
+        "desc": "A generative art experiment merging brush strokes and algorithms.",
+        "tags": { "t1": "p5.js", "t2": "WebGL", "t3": "Creativity Engines" }
+      },
+      "loopWithin": {
+        "title": "The Loop Within",
+        "desc": "A philosophical visual novel prototype focused on repetition and self-awareness.",
+        "tags": { "t1": "Godot", "t2": "Narrative Systems", "t3": "Psychology" }
+      }
+    }
+  },
+  "blog": {
+    "meta": {
+      "title": "Insights",
+      "description": "Stories, releases, and field notes from the BitPoet studio."
+    },
+    "eyebrow": "Signals",
+    "title": "Insights from the lab",
+    "description": "Ideas on craft, culture, and code — traced in neon.",
+    "error": "We couldn’t load the blog right now. Please check back shortly.",
+    "unknownDate": "Date TBA",
+    "readMore": "Read article",
+    "feed": {
+      "eyebrow": "Latest",
+      "title": "Fresh drops",
+      "cta": "All posts",
+      "readMore": "Read article"
+    },
+    "byAuthor": "By {name}"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact",
+      "description": "Start a conversation with BitPoet and let’s build the next luminous release together."
+    },
+    "eyebrow": "Let’s talk",
+    "title": "Tell us about your vision",
+    "description": "We respond within two business days with next steps.",
+    "sidebar": {
+      "title": "Direct line",
+      "copy": "Prefer a direct channel? Drop us a note and we’ll schedule a session."
+    },
+    "form": {
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "messageLabel": "Project notes",
+      "submitLabel": "Send message",
+      "successHeading": "Message sent",
+      "successBody": "Thanks for reaching out. We’ll respond soon with a tailored next step.",
+      "errorHeading": "Something went wrong",
+      "errorBody": "Please retry in a moment or email us directly.",
+      "validation": {
+        "name": "Please enter your name.",
+        "email": "Enter a valid email address.",
+        "message": "Let us know a little about your project."
+      }
+    }
+  },
+  "errors": {
+    "global": {
+      "title": "We hit a glitch",
+      "description": "The neon went dim for a moment. Retry or head back home while we recalibrate.",
+      "retry": "Retry",
+      "home": "Go home"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About",
+      "description": "Discover the BitPoet philosophy, process, and the story that informs every collaboration."
+    },
+    "eyebrow": "Origins",
+    "title": "The story behind the studio",
+    "description": "BitPoet is a promise to build experiences that feel as intentional as literature and as alive as performance.",
+    "paragraphs": [
+      "BitPoet began as an experiment in combining poetry, code, and play. I wanted to know whether software could feel like a story—whether an interface could hold the same gravity as a line of verse. Every prototype was a meditation on texture, timing, and the emotional arc of interaction.",
+      "Over the years, that experiment became a studio. I partnered with founders, artists, and technologists who believed that rigor and soul can coexist. We shipped tools for thinkers, games for storytellers, and brand experiences that carried the warmth of human craft.",
+      "My philosophy is simple: ship with intention. I treat every deliverable like a piece of literature—drafted, edited, and scored for impact. The engineering is meticulous, the design is luminous, and the copy is tuned for resonance.",
+      "Today, BitPoet blends deep technical capability with narrative intuition. Whether I am orchestrating an immersive game mechanic or building a high-performance design system, the through-line is the same: create work that moves hearts while it moves product metrics.",
+      "If you are chasing an ambitious idea and crave a partner who can translate it into a living, breathing experience, let’s compose it together."
+    ],
+    "highlights": [
+      {
+        "title": "Disciplines",
+        "items": [
+          "Full-stack engineering",
+          "Game design systems",
+          "Narrative architecture",
+          "Creative direction"
+        ]
+      },
+      {
+        "title": "Approach",
+        "items": [
+          "Strategy first, pixels second",
+          "Accessibility and performance baked-in",
+          "Story-driven product thinking"
+        ]
+      },
+      {
+        "title": "Beliefs",
+        "items": [
+          "Craft with empathy",
+          "Ship boldly, iterate responsibly",
+          "Honor both data and instinct"
+        ]
+      }
+    ]
+  }
+}

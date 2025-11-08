@@ -1,0 +1,573 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===============================
+   DARK THEME (DEFAULT)
+   =============================== */
+:root {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --color-background: 6 5 10;
+  --color-surface: 18 15 32;
+  --color-surface-muted: 26 22 46;
+  --background: rgb(var(--color-background));
+  --surface: rgb(var(--color-surface));
+  --surface-muted: rgb(var(--color-surface-muted));
+
+  /* Text system */
+  --text-primary: 245 245 255;         /* Bright white text */
+  --text-secondary: 190 190 220;       /* Subtle text */
+  --text-muted: 150 150 185;           /* Placeholders */
+
+  --color-foreground: var(--text-primary);
+  --color-foreground-muted: var(--text-secondary);
+  --color-foreground-subtle: var(--text-muted);
+  --color-surface-strong: 12 10 24;
+  --color-accent-1: 93 63 211;
+  --color-accent-2: 15 255 193;
+
+  /* Borders & accents */
+  --color-border: 80 70 120;
+  --color-ring: 15 255 193;
+  --accent-1: #5d3fd3;
+  --accent-2: #0fffc1;
+  --accent-1-translucent-05: rgba(93, 63, 211, 0.22);
+  --accent-2-translucent-05: rgba(15, 255, 193, 0.18);
+
+  /* Status colors */
+  --color-success: 64 214 169;
+  --color-danger: 233 99 135;
+
+  --foreground: rgb(var(--text-primary));
+  --header-height: 4.5rem;
+
+  /* Animated background defaults (dark theme) */
+  --bg-gradient-start: #0d1a26;
+  --bg-gradient-mid: #1a3a52;
+  --bg-gradient-end: #004d4d;
+
+  --grid-dot-color: #bea683;
+  --grid-opacity: 0.1;
+
+  --particle-primary-color: #4db6ac;
+  --particle-secondary-color: #d4c2a8;
+  --particle-opacity: 0.7;
+  --particle-glow-std-deviation: 1.5;
+
+  /* Organic waves (dark defaults) */
+  --wave-color-1: #004d4d;
+  --wave-color-2: #3a2e1a;
+  --wave-color-3: #2a1a3a;
+  --wave-opacity: 0.4;
+
+  /* Blueprint diagrams (dark defaults) */
+  --blueprint-line-color: #4db6ac;
+  --blueprint-node-color: #bea683;
+  --blueprint-opacity: 0.55;
+
+  /* Project ripples (dark defaults) */
+  --ripple-core-color: rgba(93, 63, 211, 0.55);
+  --ripple-ring-color: rgba(15, 255, 193, 0.4);
+  --ripple-opacity: 0.35;
+
+  /* Gentle ink (dark defaults) */
+  --ink-stroke-color: rgba(212, 194, 168, 0.45);
+  --ink-glow-color: rgba(77, 182, 172, 0.25);
+  --ink-opacity: 0.45;
+  --ink-blur: 48px;
+
+  /* Thematic suite additions */
+  --alchemy-cell-muted: rgba(93, 63, 211, 0.12);
+  --alchemy-cell-glow: rgba(15, 255, 193, 0.16);
+  --introspection-blob-color: rgba(93, 63, 211, 0.1);
+  --introspection-vein-color: rgba(15, 255, 193, 0.3);
+  --bridge-arc-color: rgba(93, 63, 211, 0.42);
+  --bridge-arc-active: rgba(15, 255, 193, 0.68);
+}
+
+/* ===============================
+   LIGHT THEME
+   =============================== */
+[data-theme='light'] {
+  color-scheme: light;
+
+  --color-background: 245 246 255;
+  --color-surface: 255 255 255;
+  --color-surface-muted: 240 242 255;
+  --background: rgb(var(--color-background));
+  --surface: rgb(var(--color-surface));
+  --surface-muted: rgb(var(--color-surface-muted));
+
+  --text-primary: 22 25 45;           /* Dark navy text */
+  --text-secondary: 68 72 102;
+  --text-muted: 108 112 138;
+
+  --color-foreground: var(--text-primary);
+  --color-foreground-muted: var(--text-secondary);
+  --color-foreground-subtle: var(--text-muted);
+  --color-surface-strong: 220 222 245;
+  --color-accent-1: 93 63 211;
+--color-accent-2: 0 90 180;
+
+  --color-border: 200 200 224;
+  --color-ring: 93 63 211;
+  --accent-1: #5d3fd3;
+  --accent-2: #005ab4;
+  --accent-1-translucent-05: rgba(93, 63, 211, 0.16);
+--accent-2-translucent-05: rgba(0, 118, 255, 0.32);
+
+  --color-success: 33 160 110;
+  --color-danger: 205 80 120;
+
+  /* Animated background overrides (light theme) */
+  --bg-gradient-start: #fcfcfc;
+  --bg-gradient-mid: #f4f2ef;
+  --bg-gradient-end: #e8f0f0;
+
+  --grid-dot-color: #0d1a26;
+  --grid-opacity: 0.05;
+
+  --particle-primary-color: #3d998e;
+  --particle-secondary-color: #b39c7e;
+  --particle-opacity: 0.8;
+  --particle-glow-std-deviation: 2;
+
+  --wave-color-1: #e0e8e8;
+  --wave-color-2: #f4f0ea;
+  --wave-color-3: #e9e5f1;
+  --wave-opacity: 0.8;
+
+  --blueprint-line-color: #21586d;
+  --blueprint-node-color: #b39c7e;
+  --blueprint-opacity: 0.4;
+
+  --ripple-core-color: rgba(61, 153, 142, 0.4);
+  --ripple-ring-color: rgba(179, 156, 126, 0.3);
+  --ripple-opacity: 0.22;
+
+  --ink-stroke-color: rgba(58, 46, 26, 0.25);
+  --ink-glow-color: rgba(61, 153, 142, 0.18);
+  --ink-opacity: 0.35;
+  --ink-blur: 60px;
+
+  --alchemy-cell-muted: rgba(93, 63, 211, 0.08);
+  --alchemy-cell-glow: rgba(15, 255, 193, 0.14);
+  --introspection-blob-color: rgba(93, 63, 211, 0.06);
+  --introspection-vein-color: rgba(33, 88, 109, 0.32);
+  --bridge-arc-color: rgba(93, 63, 211, 0.26);
+  --bridge-arc-active: rgba(15, 255, 193, 0.52);
+}
+
+.dark,
+[data-theme='dark'] {
+  --bg-gradient-start: #0d1a26;
+  --bg-gradient-mid: #1a3a52;
+  --bg-gradient-end: #004d4d;
+
+  --grid-dot-color: #bea683;
+  --grid-opacity: 0.1;
+
+  --particle-primary-color: #4db6ac;
+  --particle-secondary-color: #d4c2a8;
+  --particle-opacity: 0.7;
+  --particle-glow-std-deviation: 1.5;
+
+  --wave-color-1: #004d4d;
+  --wave-color-2: #3a2e1a;
+  --wave-color-3: #2a1a3a;
+  --wave-opacity: 0.4;
+
+  --blueprint-line-color: #4db6ac;
+  --blueprint-node-color: #bea683;
+  --blueprint-opacity: 0.55;
+
+  --ripple-core-color: rgba(93, 63, 211, 0.55);
+  --ripple-ring-color: rgba(15, 255, 193, 0.4);
+  --ripple-opacity: 0.35;
+
+  --ink-stroke-color: rgba(212, 194, 168, 0.45);
+  --ink-glow-color: rgba(77, 182, 172, 0.25);
+  --ink-opacity: 0.45;
+  --ink-blur: 48px;
+}
+
+/* ===============================
+   GLOBAL
+   =============================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  min-height: 100vh;
+  font-family: var(--font-sans), system-ui;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+main {
+  min-height: calc(100vh - var(--header-height));
+}
+
+@layer base {
+  body {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: rgb(var(--color-foreground));
+    font-family: var(--font-display), var(--font-sans), system-ui;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.01em;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  p,
+  span,
+  li {
+    color: rgb(var(--color-foreground));
+    font-family: var(--font-sans), system-ui;
+  }
+
+  small {
+    color: rgb(var(--color-foreground-muted));
+    font-size: 0.875rem;
+  }
+}
+
+/* ===============================
+   TEXT HELPERS
+   =============================== */
+.text-muted {
+  color: rgb(var(--color-foreground-subtle));
+}
+.text-accent {
+  color: var(--accent-1);
+}
+.text-success {
+  color: rgb(var(--color-success));
+}
+.text-danger {
+  color: rgb(var(--color-danger));
+}
+
+/* ===============================
+   BORDERS, EFFECTS, ETC.
+   =============================== */
+.neon-border {
+  position: relative;
+}
+
+.neon-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.neon-glow {
+  box-shadow: 0 0 40px rgba(93, 63, 211, 0.35),
+              0 0 80px rgba(15, 255, 193, 0.15);
+}
+
+.gradient-bg {
+  background: linear-gradient(120deg, rgba(93, 63, 211, 0.3), rgba(15, 255, 193, 0.2));
+  background-size: 300% 300%;
+  animation: gradient-move 12s ease infinite;
+}
+
+.bg-neural-gradient {
+  background: linear-gradient(
+    220deg,
+    var(--bg-gradient-start),
+    var(--bg-gradient-mid),
+    var(--bg-gradient-end),
+    var(--bg-gradient-start)
+  );
+  background-size: 400% 400%;
+  animation: gradient-flow 90s ease infinite;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gradient-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+*:focus-visible {
+  outline: 2px solid rgb(var(--color-accent-2));
+  outline-offset: 4px;
+  transition: outline 0.2s ease;
+}
+
+@layer utilities {
+  /* Logical text alignment */
+  .text-start { text-align: start; }
+  .text-end { text-align: end; }
+
+  /* Logical paddings (subset) */
+  .ps-2 { padding-inline-start: 0.5rem; }
+  .pe-2 { padding-inline-end: 0.5rem; }
+  .ps-3 { padding-inline-start: 0.75rem; }
+  .pe-3 { padding-inline-end: 0.75rem; }
+  .ps-4 { padding-inline-start: 1rem; }
+  .pe-4 { padding-inline-end: 1rem; }
+  .ps-6 { padding-inline-start: 1.5rem; }
+  .pe-6 { padding-inline-end: 1.5rem; }
+  .ps-8 { padding-inline-start: 2rem; }
+  .pe-8 { padding-inline-end: 2rem; }
+
+  /* Logical margins (subset) */
+  .ms-2 { margin-inline-start: 0.5rem; }
+  .me-2 { margin-inline-end: 0.5rem; }
+  .ms-3 { margin-inline-start: 0.75rem; }
+  .me-3 { margin-inline-end: 0.75rem; }
+  .ms-4 { margin-inline-start: 1rem; }
+  .me-4 { margin-inline-end: 1rem; }
+  .ms-6 { margin-inline-start: 1.5rem; }
+  .me-6 { margin-inline-end: 1.5rem; }
+  .ms-8 { margin-inline-start: 2rem; }
+  .me-8 { margin-inline-end: 2rem; }
+
+  .text-foreground {
+    color: rgb(var(--color-foreground));
+  }
+
+  .text-muted {
+    color: rgb(var(--color-foreground-muted));
+  }
+
+  .text-subtle {
+    color: rgb(var(--color-foreground-subtle));
+  }
+
+  .bg-background {
+    background-color: rgb(var(--color-background));
+  }
+
+  .bg-surface {
+    background-color: rgb(var(--color-surface));
+  }
+
+  .bg-surface-muted {
+    background-color: rgb(var(--color-surface-muted));
+  }
+
+  .bg-surface-strong {
+    background-color: rgb(var(--color-surface-strong));
+  }
+
+  .border-border {
+    border-color: rgb(var(--color-border));
+  }
+
+  .border-strong {
+    border-color: rgb(var(--color-surface-strong));
+  }
+
+  /* Neon shadow utilities */
+  .shadow-neon-sm {
+    box-shadow: 0 0 12px rgba(93, 63, 211, 0.25), 0 0 16px rgba(15, 255, 193, 0.12);
+  }
+  .shadow-neon-glow {
+    box-shadow: 0 0 24px rgba(93, 63, 211, 0.38), 0 0 48px rgba(15, 255, 193, 0.2);
+  }
+}
+
+/* Animated light-mode background overlay */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; transform: translateZ(0); }
+  50% { background-position: 100% 50%; transform: translateZ(0); }
+  100% { background-position: 0% 50%; transform: translateZ(0); }
+}
+
+.light-animated-bg { display: none; }
+[data-theme='light'] .light-animated-bg {
+  display: block;
+  background-image:
+    radial-gradient(800px 600px at 20% 30%, rgb(var(--color-accent-1) / 0.10), transparent 60%),
+    radial-gradient(700px 520px at 80% 70%, rgb(var(--color-accent-2) / 0.10), transparent 60%),
+    linear-gradient(120deg, rgb(var(--color-surface) / 0.85), rgb(var(--color-background) / 0.85));
+  background-size: 200% 200%, 200% 200%, 100% 100%;
+  animation: gradientShift 30s ease-in-out infinite;
+  filter: saturate(1.05) contrast(1);
+  will-change: background-position, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme='light'] .light-animated-bg { animation: none; }
+}
+
+/* RTL typographic refinement */
+html[dir='rtl'] body {
+  line-height: 1.85;
+}
+html[dir='rtl'] h1,
+html[dir='rtl'] h2,
+html[dir='rtl'] h3,
+html[dir='rtl'] h4,
+html[dir='rtl'] h5,
+html[dir='rtl'] h6 {
+  letter-spacing: 0; /* reduce tight tracking for Arabic */
+}
+
+/* =====================================
+   BITPOET THEMATIC BACKGROUND TOOLKIT
+   ===================================== */
+.bp-vroot {
+  --mx: 0;
+  --my: 0;
+  --px: 50%;
+  --py: 50%;
+  --scroll: 0;
+
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bp-layer {
+  will-change: transform;
+  transition: transform 0.12s linear;
+}
+
+.bp-node {
+  animation: bp-node-pulse 4.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.bp-blob {
+  filter: url(#about-noise);
+  animation: bp-blob-drift 36s ease-in-out infinite;
+}
+
+.bp-blob:nth-of-type(2) {
+  animation-name: bp-blob-drift-alt;
+  animation-duration: 42s;
+}
+
+.bp-vein {
+  stroke-dasharray: 4 8;
+  animation: bp-vein-glide 10s ease-in-out infinite;
+}
+
+.bp-arc {
+  stroke: var(--bridge-arc-color);
+  stroke-width: 1.6;
+  fill: none;
+  opacity: 0.35;
+  transition: stroke 0.4s ease, stroke-dashoffset 0.6s ease, opacity 0.4s ease;
+  stroke-dasharray: 320;
+  stroke-dashoffset: calc(320 * (1 - var(--bridge-focus, 0)));
+}
+
+.bp-arc.is-active {
+  stroke: var(--bridge-arc-active);
+  opacity: 0.7;
+}
+
+@keyframes bp-node-pulse {
+  0%,
+  100% {
+    transform: scale(0.85);
+    opacity: 0.4;
+  }
+  40% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  60% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+}
+
+@keyframes bp-blob-drift {
+  0% {
+    transform: translate3d(-6%, -4%, 0) scale(0.98);
+  }
+  50% {
+    transform: translate3d(4%, 6%, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(-6%, -4%, 0) scale(0.98);
+  }
+}
+
+@keyframes bp-blob-drift-alt {
+  0% {
+    transform: translate3d(5%, -6%, 0) scale(1.02) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(-4%, 5%, 0) scale(0.96) rotate(2deg);
+  }
+  100% {
+    transform: translate3d(5%, -6%, 0) scale(1.02) rotate(0deg);
+  }
+}
+
+@keyframes bp-vein-glide {
+  0% {
+    stroke-dashoffset: 120;
+  }
+  50% {
+    stroke-dashoffset: 60;
+  }
+  100% {
+    stroke-dashoffset: 120;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bp-vroot,
+  .bp-layer,
+  .bp-node,
+  .bp-blob,
+  .bp-vein,
+  .bp-arc {
+    animation: none !important;
+    transition: none !important;
+  }
+}
