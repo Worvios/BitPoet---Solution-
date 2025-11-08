@@ -9,5 +9,5 @@ export default createMiddleware({
 });
 
 export const config = {
-  matcher: ['/', '/(en|fr|ar)/:path*']
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
 };
