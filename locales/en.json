@@ -144,7 +144,10 @@
       "cta": "All posts",
       "readMore": "Read article"
     },
-    "byAuthor": "By {name}"
+    "byAuthor": "By {name}",
+    "backToBlog": "Back to Blog",
+    "writtenBy": "Written by",
+    "viewAllPosts": "View All Posts"
   },
   "contact": {
     "meta": {

@@ -1,6 +1,7 @@
 import type { Metadata, ResolvingMetadata } from 'next';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { PortableText } from '@portabletext/react';
 import type { PortableTextComponents } from '@portabletext/react';
@@ -10,6 +11,7 @@ import { buildLocalizedMetadata } from '@/lib/metadata';
 import { getBlogPostBySlug, getBlogPostSlugs } from '@/lib/sanity';
 import { urlForImage } from '@/lib/sanity-image';
 import { isLocale, type Locale } from '@/lib/i18n';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export const revalidate = 60;
 
@@ -173,66 +175,135 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   };
 
   return (
-    <>
-      <article className="mx-auto w-full max-w-4xl px-6 py-16 md:py-24">
-        {/* Header section with elegant spacing */}
-        <header className="mb-12 md:mb-16">
-          <p className="text-xs font-medium uppercase tracking-wider text-accent-2/60">
-            {published
-              ? new Intl.DateTimeFormat(typedLocale, { dateStyle: 'long' }).format(new Date(published))
-              : t('unknownDate')}
-          </p>
-          <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-foreground md:text-5xl lg:text-6xl" dir="auto">
-            {postData.title}
-          </h1>
-          {postData.excerpt ? (
-            <p className="mt-6 text-xl leading-relaxed text-muted/90 md:text-2xl" dir="auto">
-              {postData.excerpt}
-            </p>
-          ) : null}
-          {postData.author?.name ? (
-            <div className="mt-8 flex items-center gap-3">
-              {postData.author.avatar ? (
-                <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-border/40">
-                  <Image 
-                    src={urlForImage(postData.author.avatar).width(96).height(96).url()} 
-                    alt={postData.author.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ) : null}
-              <div>
-                <p className="text-sm font-medium text-foreground">
-                  {postData.author.name}
-                </p>
-                <p className="text-xs text-muted">
-                  {t('byAuthor', { name: '' }).replace(postData.author.name, '').trim()}
-                </p>
+    <div className="relative min-h-screen">
+      {/* Elegant background gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-accent-1/5 via-transparent to-transparent" />
+      
+      <article className="relative">
+        {/* Hero Section */}
+        <AnimatedSection className="relative overflow-hidden">
+          <div className="mx-auto max-w-5xl px-6 pt-20 pb-12 md:pt-32 md:pb-16">
+            {/* Breadcrumb */}
+            <Link 
+              href={`/${typedLocale}/blog`}
+              className="group inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+            >
+              <svg className="h-4 w-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              {t('backToBlog') || 'Back to Blog'}
+            </Link>
+
+            {/* Metadata */}
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <time className="text-sm font-medium uppercase tracking-wider text-accent-1" dateTime={published}>
+                {published
+                  ? new Intl.DateTimeFormat(typedLocale, { dateStyle: 'long' }).format(new Date(published))
+                  : t('unknownDate')}
+              </time>
+              {postData.author?.name && (
+                <>
+                  <span className="text-muted/40">•</span>
+                  <span className="text-sm text-muted">{postData.author.name}</span>
+                </>
+              )}
+            </div>
+
+            {/* Title */}
+            <h1 
+              className="mt-6 font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground md:text-6xl lg:text-7xl" 
+              dir="auto"
+            >
+              {postData.title}
+            </h1>
+
+            {/* Excerpt */}
+            {postData.excerpt && (
+              <p className="mt-8 max-w-3xl text-xl leading-relaxed text-muted md:text-2xl" dir="auto">
+                {postData.excerpt}
+              </p>
+            )}
+          </div>
+
+          {/* Hero Image */}
+          {ogImage && (
+            <div className="relative mx-auto max-w-6xl px-6">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-border/10 bg-muted/5 shadow-2xl shadow-black/10">
+                <Image 
+                  src={ogImage} 
+                  alt={postData.title} 
+                  fill 
+                  className="object-cover" 
+                  sizes="(min-width: 1024px) 1152px, 100vw"
+                  priority
+                />
+                {/* Decorative gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
               </div>
             </div>
-          ) : null}
-        </header>
+          )}
+        </AnimatedSection>
 
-        {/* Cover image with elegant presentation */}
-        {ogImage ? (
-          <div className="relative mb-16 -mx-6 aspect-[21/9] overflow-hidden rounded-2xl border border-border/20 shadow-2xl shadow-black/5 md:mx-0 md:rounded-3xl">
-            <Image 
-              src={ogImage} 
-              alt={postData.title} 
-              fill 
-              className="object-cover" 
-              sizes="(min-width: 768px) 896px, 100vw"
-              priority
-            />
+        {/* Article Content */}
+        <AnimatedSection className="mx-auto max-w-3xl px-6 py-16 md:py-24">
+          <div className="article-content">
+            {postData.body ? <PortableText value={postData.body as never} components={portableTextComponents} /> : null}
           </div>
-        ) : null}
 
-        {/* Content with refined typography */}
-        <div className="prose-custom max-w-none">
-          {postData.body ? <PortableText value={postData.body as never} components={portableTextComponents} /> : null}
-        </div>
+          {/* Decorative end mark */}
+          <div className="mt-16 flex justify-center">
+            <div className="flex gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-1/40" />
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-1/60" />
+              <span className="h-1.5 w-1.5 rounded-full bg-accent-1" />
+            </div>
+          </div>
+
+          {/* Author Card */}
+          {postData.author?.name && (
+            <div className="mt-16 rounded-2xl border border-border/20 bg-muted/5 p-8 backdrop-blur-sm">
+              <div className="flex items-start gap-4">
+                {postData.author.avatar && (
+                  <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-full border-2 border-border/40">
+                    <Image 
+                      src={urlForImage(postData.author.avatar).width(128).height(128).url()} 
+                      alt={postData.author.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="flex-1">
+                  <p className="text-sm font-medium uppercase tracking-wider text-muted">
+                    {t('writtenBy') || 'Written by'}
+                  </p>
+                  <p className="mt-1 text-lg font-semibold text-foreground">
+                    {postData.author.name}
+                  </p>
+                  {postData.author.role && (
+                    <p className="mt-1 text-sm text-muted">
+                      {postData.author.role}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Back to Blog CTA */}
+          <div className="mt-16 text-center">
+            <Link 
+              href={`/${typedLocale}/blog`}
+              className="group inline-flex items-center gap-2 rounded-full border border-border/40 bg-background px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-accent-1/40 hover:bg-accent-1/5"
+            >
+              <svg className="h-4 w-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              {t('viewAllPosts') || 'View All Posts'}
+            </Link>
+          </div>
+        </AnimatedSection>
       </article>
-    </>
+    </div>
   );
 }

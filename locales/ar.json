@@ -144,7 +144,10 @@
       "cta": "كل المقالات",
       "readMore": "قراءة المقال"
     },
-    "byAuthor": "بقلم {name}"
+    "byAuthor": "بقلم {name}",
+    "backToBlog": "العودة إلى المدونة",
+    "writtenBy": "كتبه",
+    "viewAllPosts": "عرض جميع المقالات"
   },
   "contact": {
     "meta": {

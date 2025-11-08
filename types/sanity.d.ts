@@ -20,8 +20,6 @@ export type LocalizedPortableText = {
   ar?: PortableTextBlock[] | null;
 };
 
-export type PortableTextValue = PortableTextBlock[] | LocalizedPortableText;
-
 export type SanityImage = {
   _type: 'image';
   asset?: {

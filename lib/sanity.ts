@@ -242,7 +242,7 @@ const postBySlugQuery = groq`*[_type == "blogPost" && slug.current == $slug && !
   seo
 }`;
 
-const postSlugsQuery = groq`*[_type == "post" && defined(slug.current)]{ "slug": slug.current }`;
+const postSlugsQuery = groq`*[_type == "blogPost" && defined(slug.current)]{ "slug": slug.current }`;
 
 export type SiteSettings = {
   id: string;
