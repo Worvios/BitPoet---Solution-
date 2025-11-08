@@ -218,7 +218,7 @@ const pageBySlugQuery = groq`*[_type == "page" && slug.current == $slug][0]{
   seo
 }`;
 
-const postsQuery = groq`*[_type == "post" && !(_id in path('drafts.**')) && defined(slug.current)]|order(publishedAt desc){
+const postsQuery = groq`*[_type == "blogPost" && !(_id in path('drafts.**')) && defined(slug.current)]|order(publishedAt desc){
   _id,
   title,
   slug,
@@ -230,7 +230,7 @@ const postsQuery = groq`*[_type == "post" && !(_id in path('drafts.**')) && defi
   seo
 }`;
 
-const postBySlugQuery = groq`*[_type == "post" && slug.current == $slug && !(_id in path('drafts.**'))][0]{
+const postBySlugQuery = groq`*[_type == "blogPost" && slug.current == $slug && !(_id in path('drafts.**'))][0]{
   _id,
   title,
   slug,

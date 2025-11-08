@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         const url = value ? urlForImage(value).width(960).fit('max').url() : null;
         if (!url) return null;
         return (
-          <div className="relative my-8 aspect-video overflow-hidden rounded-3xl border border-border/40">
+          <div className="relative my-8 aspect-video overflow-hidden rounded-3xl border border-border/40 shadow-lg">
             <Image src={url} alt={postData.title} fill className="object-cover" sizes="(min-width: 768px) 640px, 100vw" />
           </div>
         );

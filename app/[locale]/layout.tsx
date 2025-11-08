@@ -32,6 +32,7 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   unstable_setRequestLocale(locale as (typeof locales)[number]);
 
   const messages = await getMessages();
+  const direction = locale === 'ar' ? 'rtl' : 'ltr';
 
   const tNav = await getTranslations({ locale, namespace: 'navigation' });
   const navLinks: NavigationLink[] = [
@@ -50,19 +51,23 @@ export default async function LocaleLayout({ children, params: { locale } }: Pro
   });
 
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
-      <ThemeProvider>
-        <div className="relative flex min-h-screen flex-col overflow-hidden">
-          <script
-            type="application/ld+json"
-            suppressHydrationWarning
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
-          />
-          <Header locale={locale} navigation={navLinks} />
-          <main className="flex-1">{children}</main>
-          <Footer settings={settings} navigation={navLinks} />
-        </div>
-      </ThemeProvider>
-    </NextIntlClientProvider>
+    <html lang={locale} dir={direction}>
+      <body>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <ThemeProvider>
+            <div className="relative flex min-h-screen flex-col overflow-hidden">
+              <script
+                type="application/ld+json"
+                suppressHydrationWarning
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+              />
+              <Header locale={locale} navigation={navLinks} />
+              <main className="flex-1">{children}</main>
+              <Footer settings={settings} navigation={navLinks} />
+            </div>
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
+    </html>
   );
 }
